@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #2e3650;
+  --primary-color-hover: #262b40;
+  --background-color: #f5f8fb;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  background: var(--background-color);
+}

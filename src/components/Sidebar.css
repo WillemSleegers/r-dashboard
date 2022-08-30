@@ -1,0 +1,9 @@
+#sidebar .nav-link:hover {
+  background-color: var(--primary-color-hover);
+}
+
+#sidebar-content {
+  height: 100%;
+
+  background-color: var(--primary-color);
+}
