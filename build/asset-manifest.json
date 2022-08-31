@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.d94faacb.css",
-    "main.js": "/static/js/main.f7d5c964.js",
-    "index.html": "/index.html",
-    "static/media/dashboard.svg": "/static/media/dashboard.5311e135526bc9098437a99f5e84d019.svg",
-    "main.d94faacb.css.map": "/static/css/main.d94faacb.css.map",
-    "main.f7d5c964.js.map": "/static/js/main.f7d5c964.js.map"
+    "main.css": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/css/main.d94faacb.css",
+    "main.js": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/js/main.d81b48f6.js",
+    "index.html": "https://splendorous-puffpuff-1bfd1c.netlify.app/index.html",
+    "static/media/dashboard.svg": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/media/dashboard.5311e135526bc9098437a99f5e84d019.svg",
+    "main.d94faacb.css.map": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/css/main.d94faacb.css.map",
+    "main.d81b48f6.js.map": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/js/main.d81b48f6.js.map"
   },
   "entrypoints": [
     "static/css/main.d94faacb.css",
-    "static/js/main.f7d5c964.js"
+    "static/js/main.d81b48f6.js"
   ]
 }

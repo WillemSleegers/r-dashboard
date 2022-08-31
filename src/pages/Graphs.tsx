@@ -14,7 +14,8 @@ const PageGraphs = () => {
 
   useEffect(() => {
     const updateFaithfulNames = async () => {
-      const apiURL = process.env.REACT_APP_PUBLIC_URL
+      const apiURL = process.env.REACT_APP_PUBLIC_API_URL
+      console.log(apiURL)
       const response = await get(apiURL + "faithful/names")
       setFaithfulNames(response.data)
     }
@@ -24,7 +25,7 @@ const PageGraphs = () => {
 
   useEffect(() => {
     const updateHistData = async (column: string, bins: string) => {
-      const apiURL = process.env.REACT_APP_PUBLIC_URL
+      const apiURL = process.env.REACT_APP_PUBLIC_API_URL
       const response = await get(apiURL + "faithful/hist", {
         params: {
           column: column,
