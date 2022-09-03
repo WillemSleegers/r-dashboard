@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/css/main.d94faacb.css",
-    "main.js": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/js/main.d81b48f6.js",
+    "main.js": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/js/main.42a18c74.js",
     "index.html": "https://splendorous-puffpuff-1bfd1c.netlify.app/index.html",
     "static/media/dashboard.svg": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/media/dashboard.5311e135526bc9098437a99f5e84d019.svg",
     "main.d94faacb.css.map": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/css/main.d94faacb.css.map",
-    "main.d81b48f6.js.map": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/js/main.d81b48f6.js.map"
+    "main.42a18c74.js.map": "https://splendorous-puffpuff-1bfd1c.netlify.app/static/js/main.42a18c74.js.map"
   },
   "entrypoints": [
     "static/css/main.d94faacb.css",
-    "static/js/main.d81b48f6.js"
+    "static/js/main.42a18c74.js"
   ]
 }

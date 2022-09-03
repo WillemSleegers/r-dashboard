@@ -14,8 +14,7 @@ const PageGraphs = () => {
 
   useEffect(() => {
     const updateFaithfulNames = async () => {
-      const apiURL = process.env.REACT_APP_PUBLIC_API_URL
-      console.log(apiURL)
+      const apiURL = process.env.REACT_APP_PUBLIC_URL
       const response = await get(apiURL + "faithful/names")
       setFaithfulNames(response.data)
     }
@@ -25,7 +24,7 @@ const PageGraphs = () => {
 
   useEffect(() => {
     const updateHistData = async (column: string, bins: string) => {
-      const apiURL = process.env.REACT_APP_PUBLIC_API_URL
+      const apiURL = process.env.REACT_APP_PUBLIC_URL
       const response = await get(apiURL + "faithful/hist", {
         params: {
           column: column,
@@ -72,7 +71,7 @@ const PageGraphs = () => {
     <div className="p-3 w-100">
       <h1>Graphs</h1>
       <div className="d-flex flex-column flex-lg-row gap-3">
-        <div className="card flex-grow-1" style={{ height: "500px" }}>
+        <div className="card flex-grow-1" style={{ height: "480px" }}>
           <div className="card-body overflow-hidden">
             <Plot
               className="w-100"
@@ -80,7 +79,7 @@ const PageGraphs = () => {
               layout={{
                 title: "Histogram of " + faithfulName,
                 bargap: 0.01,
-                autosize: true,
+                autosize: false,
                 xaxis: {
                   title:
                     faithfulName === "eruptions"
@@ -92,7 +91,6 @@ const PageGraphs = () => {
                 },
               }}
               config={{ responsive: true }}
-              useResizeHandler={true}
             />
           </div>
         </div>
