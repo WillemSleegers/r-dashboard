@@ -27,6 +27,9 @@ const Sidebar = ({ open }: SidebarProps) => {
             <Link className="nav-link text-white" to="/page3">
               Math
             </Link>
+            <Link className="nav-link text-white" to="/page4">
+              Links
+            </Link>
           </nav>
         </div>
       </div>

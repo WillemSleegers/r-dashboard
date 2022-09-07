@@ -9,6 +9,7 @@ import Header from "./components/Header"
 import PageGraphs from "./pages/Graphs"
 import PageTables from "./pages/Tables"
 import PageMath from "./pages/Math"
+import PageLinks from "./pages/Links"
 
 const root = createRoot(document.getElementById("root") as HTMLElement)
 
@@ -21,6 +22,7 @@ root.render(
           <Route path="/" element={<PageGraphs />} />
           <Route path="/page2" element={<PageTables />} />
           <Route path="/page3" element={<PageMath />} />
+          <Route path="/page4" element={<PageLinks />} />
         </Routes>
       </div>
     </BrowserRouter>
