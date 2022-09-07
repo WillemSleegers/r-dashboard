@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Header from "./components/Header"
 import PageGraphs from "./pages/Graphs"
 import PageTables from "./pages/Tables"
-import PageMisc from "./pages/Misc"
+import PageMath from "./pages/Math"
 
 const root = createRoot(document.getElementById("root") as HTMLElement)
 
@@ -20,7 +20,7 @@ root.render(
         <Routes>
           <Route path="/" element={<PageGraphs />} />
           <Route path="/page2" element={<PageTables />} />
-          <Route path="/page3" element={<PageMisc />} />
+          <Route path="/page3" element={<PageMath />} />
         </Routes>
       </div>
     </BrowserRouter>
