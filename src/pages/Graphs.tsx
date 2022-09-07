@@ -30,6 +30,7 @@ const PageGraphs = () => {
           x: data.x,
           y: data.y,
           mode: "markers",
+          marker: { color: "#24A9D6" },
           type: "scatter",
         },
       ])
