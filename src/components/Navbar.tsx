@@ -9,10 +9,7 @@ type NavbarProps = {
 
 const Navbar = ({ open, setOpen }: NavbarProps) => {
   return (
-    <div
-      id="navbar"
-      className="navbar navbar-dark navbar-md-expand d-md-none p-3"
-    >
+    <div id="navbar" className="navbar navbar-dark navbar-md-expand p-3">
       <Brand />
       <button
         className="navbar-toggler"
