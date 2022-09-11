@@ -31,8 +31,8 @@ const Navbar = ({
           className="navbar-toggler"
           type="button"
           onClick={() => {
+            setToggled(!toggled)
             if (window.innerWidth >= 768) {
-              setToggled(!toggled)
               setSidebarOpen(!sidebarOpen)
             }
             if (window.innerWidth < 768) {
@@ -42,7 +42,7 @@ const Navbar = ({
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className={toggled ? "" : "d-md-none"}>
+        <div className={toggled && !sidebarOpen ? "" : "d-md-none"}>
           <Brand />
         </div>
       </div>

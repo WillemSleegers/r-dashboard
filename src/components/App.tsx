@@ -21,7 +21,6 @@ const Navigation = () => {
       setSidebarOpen(false)
     } else if (window.innerWidth >= 768 && navbarOpen) {
       setSidebarOpen(true)
-      setToggled(!toggled)
     } else if (window.innerWidth >= 768 && !toggled) {
       setSidebarOpen(true)
     }
