@@ -10,22 +10,45 @@ import PageMath from "../pages/Math"
 import PageLinks from "../pages/Links"
 
 const Navigation = () => {
-  const [open, setOpen] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(
+    window.innerWidth < 768 ? false : true
+  )
+  const [navbarOpen, setNavbarOpen] = useState(false)
+  const [toggled, setToggled] = useState(false)
+
+  window.onresize = () => {
+    if (window.innerWidth < 768 && !toggled) {
+      setSidebarOpen(false)
+    } else if (window.innerWidth >= 768 && navbarOpen) {
+      setSidebarOpen(true)
+      setToggled(!toggled)
+    } else if (window.innerWidth >= 768 && !toggled) {
+      setSidebarOpen(true)
+    }
+
+    if (window.innerWidth < 768) setSidebarOpen(false)
+    if (window.innerWidth >= 768) setNavbarOpen(false)
+  }
 
   return (
     <BrowserRouter>
-      <div className="min-vh-100 d-flex flex-column flex-md-row">
-        <div className="d-flex flex-row vw-100">
-          <Sidebar open={open} />
-          <div className="flex-grow-1 d-flex flex-column">
-            <Navbar open={open} setOpen={setOpen} />
-            <Routes>
-              <Route path="/" element={<PageGraphs />} />
-              <Route path="/page2" element={<PageTables />} />
-              <Route path="/page3" element={<PageMath />} />
-              <Route path="/page4" element={<PageLinks />} />
-            </Routes>
-          </div>
+      <div className="d-flex flex-row min-vh-100 vw-100 overflow-hidden">
+        <Sidebar open={sidebarOpen} />
+        <div className="flex-grow-1 d-flex flex-column overflow-scroll">
+          <Navbar
+            sidebarOpen={sidebarOpen}
+            setSidebarOpen={setSidebarOpen}
+            navbarOpen={navbarOpen}
+            setNavbarOpen={setNavbarOpen}
+            toggled={toggled}
+            setToggled={setToggled}
+          />
+          <Routes>
+            <Route path="/" element={<PageGraphs />} />
+            <Route path="/page2" element={<PageTables />} />
+            <Route path="/page3" element={<PageMath />} />
+            <Route path="/page4" element={<PageLinks />} />
+          </Routes>
         </div>
       </div>
     </BrowserRouter>

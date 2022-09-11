@@ -11,10 +11,10 @@ type SidebarProps = {
 
 const Sidebar = ({ open }: SidebarProps) => {
   return (
-    <Collapse in={open}>
-      <div id="sidebar" className="d-md-block shadow">
+    <Collapse in={open} dimension="width">
+      <div id="sidebar" className="shadow">
         <div id="sidebar-content">
-          <div className="d-none d-md-block">
+          <div className="p-3 fs-3">
             <Brand />
           </div>
           <nav className="nav nav-pills flex-column p-2">

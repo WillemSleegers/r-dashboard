@@ -54,7 +54,7 @@ const Table = <T extends object>({ data }: TableProps<T>) => {
   )
 
   return (
-    <div className="p-2">
+    <div className="w-100">
       <div className="d-flex gap-3 flex-column flex-sm-row justify-content-sm-between text-nowrap">
         <TablePageSize pageSize={pageSize} setPageSize={setPageSize} />
         <TableFilter
@@ -64,7 +64,7 @@ const Table = <T extends object>({ data }: TableProps<T>) => {
         />
       </div>
       <div className="w-100 overflow-auto">
-        <table {...getTableProps()} className="table">
+        <table {...getTableProps()} className="w-100 table">
           <thead>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>

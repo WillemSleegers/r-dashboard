@@ -86,7 +86,7 @@ const PageGraphs = () => {
   }
 
   return (
-    <div className="p-3 w-100">
+    <div className="p-3">
       <h1>Graphs</h1>
 
       <div className="mb-3">

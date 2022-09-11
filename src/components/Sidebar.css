@@ -4,6 +4,7 @@
 
 #sidebar-content {
   height: 100%;
+  width: 260px;
 
   background-color: var(--primary-color);
 }

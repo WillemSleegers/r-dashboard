@@ -18,10 +18,10 @@ const PageTables = () => {
   }, [])
 
   return (
-    <div className="p-3 w-100 overflow-auto">
+    <div className="w-100 p-3">
       <h1 className="mb-3">Tables</h1>
-      <div className="">
-        <div className="card p-2 w-100">{data && <Table data={data} />}</div>
+      <div className="w-100">
+        <div className="w-100 card p-3">{data && <Table data={data} />}</div>
       </div>
     </div>
   )
