@@ -22,11 +22,8 @@ const Navbar = ({
   setToggled,
 }: NavbarProps) => {
   return (
-    <div
-      id="navbar"
-      className="navbar navbar-dark navbar-md-expand flex-column"
-    >
-      <div className="w-100 p-2 d-flex gap-3 justify-content-start">
+    <div id="navbar" className="navbar navbar-dark flex-column">
+      <div className="w-100 p-2 d-flex align-items-center justify-content-start gap-3 ">
         <button
           className="navbar-toggler"
           type="button"
@@ -42,23 +39,25 @@ const Navbar = ({
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className={toggled && !sidebarOpen ? "" : "d-md-none"}>
-          <Brand />
-        </div>
+        <Collapse in={!sidebarOpen} dimension={"width"}>
+          <div className="fs-5">
+            <Brand />
+          </div>
+        </Collapse>
       </div>
       <Collapse in={navbarOpen}>
         <div>
-          <nav className="navbar-nav navbar-collapse nav-pills flex-row gap-3 p-2">
-            <Link className="nav-link text-white p-0" to="/">
+          <nav className="nav nav-pills pb-1">
+            <Link className="nav-link" to="/">
               Graphs
             </Link>
-            <Link className="nav-link text-white p-0" to="/page2">
+            <Link className="nav-link" to="/page2">
               Tables
             </Link>
-            <Link className="nav-link text-white p-0" to="/page3">
+            <Link className="nav-link" to="/page3">
               Math
             </Link>
-            <Link className="nav-link text-white p-0" to="/page4">
+            <Link className="nav-link" to="/page4">
               Links
             </Link>
           </nav>

@@ -18,16 +18,16 @@ const Sidebar = ({ open }: SidebarProps) => {
             <Brand />
           </div>
           <nav className="nav nav-pills flex-column p-2">
-            <Link className="nav-link text-white" to="/">
+            <Link className="nav-link" to="/">
               Graphs
             </Link>
-            <Link className="nav-link text-white" to="/page2">
+            <Link className="nav-link" to="/page2">
               Tables
             </Link>
-            <Link className="nav-link text-white" to="/page3">
+            <Link className="nav-link" to="/page3">
               Math
             </Link>
-            <Link className="nav-link text-white" to="/page4">
+            <Link className="nav-link" to="/page4">
               Links
             </Link>
           </nav>

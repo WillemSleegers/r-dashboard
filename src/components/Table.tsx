@@ -63,7 +63,7 @@ const Table = <T extends object>({ data }: TableProps<T>) => {
           setGlobalFilter={setGlobalFilter}
         />
       </div>
-      <div className="w-100 overflow-auto">
+      <div className="overflow-auto">
         <table {...getTableProps()} className="w-100 table">
           <thead>
             {headerGroups.map((headerGroup) => (

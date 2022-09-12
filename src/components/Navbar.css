@@ -1,3 +1,11 @@
 #navbar {
-  background-color: var(--primary-color);
+  background-color: var(--primary-text-color-hover);
+}
+
+#navbar .nav-link {
+  color: var(--primary-text-color);
+}
+
+#navbar .nav-link:hover {
+  background-color: var(--secondary-text-color-hover);
 }

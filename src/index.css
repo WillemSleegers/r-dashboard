@@ -1,7 +1,11 @@
 :root {
   --primary-color: #2e3650;
-  --primary-color-hover: #262b40;
+  --secondary-color: #262b40;
   --background-color: #f5f8fb;
+  --primary-text-color: white;
+  --primary-text-color-hover: #262b40;
+  --secondary-text-color-hover: #1e2131;
+  --navbar-background-color: white;
 }
 
 body {
@@ -11,4 +15,8 @@ body {
 
 #root {
   background: var(--background-color);
+}
+
+.brand {
+  color: var(--primary-text-color);
 }

@@ -86,7 +86,7 @@ const PageGraphs = () => {
   }
 
   return (
-    <div className="p-3">
+    <div className="p-3 w-100">
       <h1>Graphs</h1>
 
       <div className="mb-3">
@@ -181,9 +181,9 @@ const PageGraphs = () => {
         </div>
       </div>
 
-      <div>
+      <div className="w-100">
         <h2>Scatter plot</h2>
-        <div className="d-flex flex-column flex-lg-row gap-3">
+        <div className="">
           <div className="card flex-grow-1" style={{ height: "480px" }}>
             <div className="card-body overflow-hidden">
               <Plot

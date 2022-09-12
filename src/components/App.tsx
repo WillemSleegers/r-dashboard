@@ -31,9 +31,9 @@ const Navigation = () => {
 
   return (
     <BrowserRouter>
-      <div className="d-flex flex-row min-vh-100 vw-100 overflow-hidden">
+      <div className="d-flex min-vh-100">
         <Sidebar open={sidebarOpen} />
-        <div className="flex-grow-1 d-flex flex-column overflow-scroll">
+        <div className="flex-grow-1 d-flex flex-column overflow-auto">
           <Navbar
             sidebarOpen={sidebarOpen}
             setSidebarOpen={setSidebarOpen}
