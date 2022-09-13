@@ -16,8 +16,8 @@ const Navigation = () => {
   const links = [
     { name: "Graphs", path: "/", element: <PageGraphs /> },
     { name: "Tables", path: "/page2", element: <PageTables /> },
-    { name: "Misc", path: "/page3", element: <PageMath /> },
-    { name: "Math", path: "/page4", element: <PageLinks /> },
+    { name: "Math", path: "/page3", element: <PageMath /> },
+    { name: "Links", path: "/page4", element: <PageLinks /> },
   ]
 
   const breakpoint = 768
