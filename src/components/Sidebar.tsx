@@ -6,30 +6,28 @@ import Brand from "./Brand"
 import "./Sidebar.css"
 
 type SidebarProps = {
+  title: string
+  logo: string
+  links: { name: string; path: string }[]
   open: boolean
 }
 
-const Sidebar = ({ open }: SidebarProps) => {
+const Sidebar = ({ title, logo, links, open }: SidebarProps) => {
   return (
     <Collapse in={open} dimension="width">
       <div id="sidebar" className="shadow">
         <div id="sidebar-content">
           <div className="p-3 fs-3">
-            <Brand />
+            <Brand title={title} logo={logo} />
           </div>
           <nav className="nav nav-pills flex-column p-2">
-            <Link className="nav-link" to="/">
-              Graphs
-            </Link>
-            <Link className="nav-link" to="/page2">
-              Tables
-            </Link>
-            <Link className="nav-link" to="/page3">
-              Math
-            </Link>
-            <Link className="nav-link" to="/page4">
-              Links
-            </Link>
+            {links.map((x) => {
+              return (
+                <Link className="nav-link" to={x.path}>
+                  {x.name}
+                </Link>
+              )
+            })}
           </nav>
         </div>
       </div>

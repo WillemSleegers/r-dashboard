@@ -5,6 +5,9 @@ import Brand from "./Brand"
 import "./Navbar.css"
 
 type NavbarProps = {
+  title: string
+  logo: string
+  links: { name: string; path: string }[]
   sidebarOpen: boolean
   setSidebarOpen: Function
   navbarOpen: boolean
@@ -14,6 +17,9 @@ type NavbarProps = {
 }
 
 const Navbar = ({
+  title,
+  logo,
+  links,
   sidebarOpen,
   setSidebarOpen,
   navbarOpen,
@@ -41,25 +47,20 @@ const Navbar = ({
         </button>
         <Collapse in={!sidebarOpen} dimension={"width"}>
           <div className="fs-5">
-            <Brand />
+            <Brand title={title} logo={logo} />
           </div>
         </Collapse>
       </div>
       <Collapse in={navbarOpen}>
         <div>
           <nav className="nav nav-pills pb-1">
-            <Link className="nav-link" to="/">
-              Graphs
-            </Link>
-            <Link className="nav-link" to="/page2">
-              Tables
-            </Link>
-            <Link className="nav-link" to="/page3">
-              Math
-            </Link>
-            <Link className="nav-link" to="/page4">
-              Links
-            </Link>
+            {links.map((x) => {
+              return (
+                <Link className="nav-link" to={x.path}>
+                  {x.name}
+                </Link>
+              )
+            })}
           </nav>
         </div>
       </Collapse>

@@ -1,10 +1,13 @@
-import dashboard from "../assets/img/dashboard.svg"
+type BrandProps = {
+  title: string
+  logo: string
+}
 
-const Brand = () => {
+const Brand = ({ title, logo }: BrandProps) => {
   return (
     <div className="brand d-flex align-items-center gap-2">
-      <img src={dashboard} alt="Brand logo" />
-      Dashboard
+      <img src={logo} alt="Brand logo" />
+      {title}
     </div>
   )
 }
