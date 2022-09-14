@@ -32,6 +32,7 @@ const Navigation = () => {
     if (window.innerWidth < breakpoint && !toggled) {
       setSidebarOpen(false)
     } else if (window.innerWidth >= breakpoint && navbarOpen) {
+      setToggled(false)
       setSidebarOpen(true)
     } else if (window.innerWidth >= breakpoint && !toggled) {
       setSidebarOpen(true)
